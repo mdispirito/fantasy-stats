@@ -6,8 +6,10 @@ authors = ["Marco Di Spirito <marco.n.dispirito@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.11,<3.13"
 pandas = "^2.1.0"
+scipy = "^1.11.2"
+matplotlib = "^3.8.0"
 
 
 [build-system]

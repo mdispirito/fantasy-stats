@@ -5,7 +5,7 @@ Values using standard 8 cats.
 Punting turnovers of course.
 """
 
-df = pd.read_csv("projections/projections.csv")
+INPUT_PROJECTIONS = "projections/projections.csv"
 
 STATS = [
     "points",
@@ -26,6 +26,8 @@ RANK_STATS = [
     "field_goal_z_score",
     "free_throw_z_score"
 ]
+
+df = pd.read_csv(INPUT_PROJECTIONS)
 
 # calculate points and rebounds
 df["points"] = ( (df["field_goals"] - df["threes"]) * 2 ) + ( df["threes"] * 3 ) + ( df["free_throws"] * 1 )
